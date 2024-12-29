@@ -15,7 +15,7 @@ for filename in os.listdir(posts_dir):
         with open(filepath, "r") as file:
             content = file.read()
         
-        # Step 2: Find all image links in the format ![Image Description](/images/Pasted%20image%20...%20.png)
+        # Step 2: Find all image links in the format ![Image Description](/images/Pasted%20image%20...%20.png, etc)
         images = re.findall(r'\[\[([^]]*\.(?:png|jpg|jpeg|gif|webp))\]\]', content)
         
         # Step 3: Replace image links and ensure URLs are correctly formatted
