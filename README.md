@@ -19,7 +19,7 @@ This will store the scripts I use to autopublish my obsidian posts to blog posts
 A workable version of the python script is done.
 ## Next Steps
 ### Syncing Obsidian Post Notes to Hugo Content Dir
-Network Chuck proposed using rsync to move files from the Obsidian dir to the Hugo content dir. Because I want to put the files into a subdirectory, I will need a different plan. I have existing posts and I also want to be able to add others by other means, so I don't want to blow away and recreate the content/posts data every time I add or change a post. Maybe I need to rysnc the posts to an intermediate directory and compare the files in the intermediate directory to their counterparts in the Hugo posts dir, updating them based on the dates they were last changed?
+Network Chuck proposed using rsync to move files from the Obsidian dir to the Hugo content dir. As long as I assume Obsidian is the source of truth for the posts created there, then I can use rysnc. It will just move over all the posts and convert them. If they have been updated, they will update (because the python script will overwrite the files). If they are the same, nothing changes except the time stamps, but that doens't matter because the blog posts are dated in their front matter. I can still add posts manually and this setup will ignore them (in that it never will see them. The only thing I need to be careful of is not to name two posts the same.
 
 ### Obsidian
 * I'd like to make a template in Obsidian that automatically creates the front matter for a new blog post note.
