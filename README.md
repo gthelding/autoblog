@@ -3,7 +3,7 @@
 These are the scripts that I use to autopublish my obsidian posts to blog posts in my hugo SSG site. Thanks to [Network Chuck](https://www.youtube.com/watch?v=dnE7c0ELEH8) for the inspiration.
 
 ## Workflow
-* Create an Obsidian note in a specific folder (e.g, "Posts")
+* Create an Obsidian note in a specific folder (e.g., "Posts")
 * Run a bash script (updateblog.sh), which:
   * Moves any new Post notes from the Posts directory to the content/posts in my HUGO site's directory
   * Calls a python script (imgproc.py) to analyze any .md files at the root of the posts directory. For each md file, it:
