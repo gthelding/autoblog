@@ -1,6 +1,6 @@
 # autoblog
 ## Goal
-These are the scripts that I use to autopublish my [Obsidian](https://obsidian.md) posts to blog posts in my hugo SSG site. Thanks to [Network Chuck](https://www.youtube.com/watch?v=dnE7c0ELEH8) for the inspiration.
+These are the scripts that I use to autopublish my [Obsidian](https://obsidian.md) posts to blog posts in my [Hugo](https://gohugo.io) SSG site. Thanks to [Network Chuck](https://www.youtube.com/watch?v=dnE7c0ELEH8) for the inspiration.
 
 ## Workflow
 * Create an Obsidian note in a specific folder (e.g., "Posts")
