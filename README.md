@@ -34,11 +34,11 @@ a2-->rsync
 rsync-->note
 a3-->copy
 note-->extract
-build@{ shape: doc, label: "Build Hugo Site Including New Post Subdir" }
-git@{ shape: doc, label: "Commit and Push Hugo Project to Private GitHub" }
+build@{ shape: process, label: "Build Hugo Site Including New Post Subdir" }
+git@{ shape: process, label: "Commit and Push Hugo Project to Private GitHub" }
 mygh[(My GitHub)]
 vps(((Webserver)))
-pub@{ shape: doc, label: "Rsync to Web Server" }
+pub@{ shape: process, label: "Rsync to Web Server" }
 subgraph draft [Draft New Note in Obsidian]
 a1-->|Markdown File|a2
 a1-->|Images|a3
