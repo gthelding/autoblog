@@ -3,7 +3,7 @@
 These are the scripts that I use to autopublish my [Obsidian](https://obsidian.md) posts to blog posts in my [Hugo](https://gohugo.io) SSG site. Thanks to [Network Chuck](https://www.youtube.com/watch?v=dnE7c0ELEH8) for the inspiration.
 
 ## Workflow
-* Create an Obsidian note in a specific folder (e.g., "Posts")
+* Create an Obsidian note in a specific folder (e.g., "Posts" using Template "Blog Post Template.md")
 * Run a bash script (updateblog.sh), which:
   * Moves any new Post notes from the Posts directory to the content/posts in my HUGO site's directory
   * Calls a python script (imgproc.py) to analyze any .md files at the root of the posts directory. For each md file, it:
@@ -59,10 +59,8 @@ git-->pub
 pub-->vps
 end
 ```
-
-
 ## Obsidian
-* I use a template (Blog Post Template.md) in Obsidian that automatically creates the front matter for a new blog post note by prompting the user when a new note is made using the template. The Template requires the Templater Plugin. Whenever I make a new note in the Posts Folder, it uses this template.
+* I use a template ([Blog Post Template.md](https://healthcarenetwork.org/)) in Obsidian that automatically creates the front matter for a new blog post note by prompting the user when a new note is made using the template. The Template requires the Templater Plugin. Whenever I make a new note in the Posts Folder, it uses this template.
 
 ## Future Plans
 * Adding captions to images from Obsidian to the hugo markdown file.
