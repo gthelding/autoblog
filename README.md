@@ -14,7 +14,7 @@ These are the scripts that I use to autopublish my obsidian posts to blog posts 
       * Looks for an image that is embedded in the markdown file using the format [image.ext|thumbnail], move that image to the subdir as tumbnail.ext, and remove the reference to the image from the markdown file
       * Moves the file from content/posts to the new subdir, renaming it to index.md
   * Calls hugo to build the site locally
-  * Uses git to commit and push changes to guthub repo for the site (This repo just stores a copy of the HUGO project. Some may want to deploy the site using git. I have a VPS webserver for that.)
+  * Uses git to commit and push changes to (in my case, a private) github repo for the site (This repo just stores a copy of the HUGO project. Some may want to deploy the site using git. I have a VPS webserver for that.)
   * Call rysnc to publish the site to webserver (in my case, a VPS running apache in a docker container)
   
 ## Flow Chart of the Process
