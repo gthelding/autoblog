@@ -51,7 +51,10 @@ fi
 # this is useful for updating posts in Hugo that have been edited in Obsidian.
 # I do not use the --delete flag to avoid deleting posts in Hugo that are not in Obsidian.
 # This way, I can add posts by other means if I want to
-if ! rsync -avu "$sourcePath" "$destinationPath"; then
+# The --exclude flag is used to exclude the Drafts folder in Obsidian from syncing
+# If you don't have a Drafts folder, you can remove the --exclude flag
+#if ! rsync -avu "$sourcePath" "$destinationPath"; then
+if ! rsync -avu --exclude 'Drafts' "$sourcePath" "$destinationPath"; then
     echo "Failed to sync posts from Obsidian."
     exit 1
 fi
