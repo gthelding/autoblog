@@ -46,6 +46,7 @@ if [ ! -d "$destinationPath" ]; then
     echo "Destination path does not exist: $destinationPath"
     exit 1
 fi
+
 # Sync posts from Obsidian to Hugo content folder
 # The -u flag skips files that are newer in the destination folder.
 # this is useful for updating posts in Hugo that have been edited in Obsidian.
@@ -54,6 +55,7 @@ fi
 # The --exclude flag is used to exclude the Drafts folder in Obsidian from syncing
 # If you don't have a Drafts folder, you can remove the --exclude flag
 #if ! rsync -avu "$sourcePath" "$destinationPath"; then
+
 if ! rsync -avu --exclude 'Drafts' "$sourcePath" "$destinationPath"; then
     echo "Failed to sync posts from Obsidian."
     exit 1
@@ -118,6 +120,6 @@ echo "Deploying to VPS Web Server..."
 if ! rsync -avz -e "ssh -p $sshPort" --delete "$websitePath" "$vpsUser@$vps:$vpsPath"; then
     echo "Failed to deploy to VPS Web Server."
     exit 1
-fi  
+fi
 
 echo "Done. New Blog Post(s) published."

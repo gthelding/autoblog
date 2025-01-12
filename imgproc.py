@@ -3,18 +3,18 @@ import re
 import shutil
 
 # Paths
-posts_dir = "/home/greg/helding.net/content/posts/"
-attachments_dir = "/home/greg/Documents/Obsidian Vaults/Peregrin/Greg/Files/"
-static_images_dir = "/home/greg/helding.net/static/images/"
+posts_dir = "/path/to/hugo/website/posts/"
+attachments_dir = "/path/to/Obsidian/attachments/"
+static_images_dir = "/path/to/hugo/website/images/"
 
 # Step 1: Process each markdown file in the posts directory
 for filename in os.listdir(posts_dir):
     if filename.endswith(".md"):
         filepath = os.path.join(posts_dir, filename)
-        
+
         with open(filepath, "r") as file:
             content = file.read()
-        
+
         # Step 2: Make a new directory for the post and its images 
         # Replace spaces with dashes in filename and remove the file extension
         filename_fixed = filename.replace(" ", "-")
@@ -46,10 +46,10 @@ for filename in os.listdir(posts_dir):
             image_source = os.path.join(attachments_dir, image)
             if os.path.exists(image_source):
                 shutil.copy(image_source, new_filepath)
-        
+
         # Step 5: Find and format remaining image links (that are not cover or thumbnail) and copy images to post_dir
         # Find all image links in the Obsidian Format '![[image.png|text]]', where text is the caption for the image
-        
+
         images = re.findall(r'!\[\[([^|\]]*\.(?:png|jpg|jpeg|gif|webp))(?:\|([^]]*))?\]\]', content)
 
         # Replace image links; ensure URLs are correctly formatted; remove cover image and thumbnail image links
@@ -62,14 +62,12 @@ for filename in os.listdir(posts_dir):
             if os.path.exists(image_source):
                 shutil.copy(image_source, post_dir)
 
-
         # Step 6: Write the updated content back to the markdown file
         with open(filepath, "w") as file:
             file.write(content)
-       
+
         # Step 7: Move the markdown file to a file named index.md in the post_dir
         new_filepath = os.path.join(post_dir, "index.md")
         shutil.move(filepath, new_filepath)
 
 print("Markdown files processed and images and markdown files copied successfully.")
-
