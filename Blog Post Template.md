@@ -20,6 +20,6 @@ categories:
 summary: <% summary %>
 ---
 `Enter a cover image thusly: ![[Image_File.ext|cover]]`
-`Enter a thumbnale image thusly: ![[Image_File.ext|thumbnail]]`
+`Enter a thumbnail image thusly: ![[Image_File.ext|thumbnail]]`
 ## Heading One
 Post text
