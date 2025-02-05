@@ -1,6 +1,21 @@
-# autoblog
-## Goal
-These are the scripts that I use to autopublish my [Obsidian](https://obsidian.md) posts to blog posts in my [Hugo](https://gohugo.io) SSG site. Thanks to [Network Chuck](https://www.youtube.com/watch?v=dnE7c0ELEH8) for the inspiration.
+# Autoblog
+
+Transform your Obsidian notes into a Hugo-powered blog automatically. This project provides scripts to seamlessly publish your Obsidian notes as blog posts using Hugo static site generator. I use this tool to autopublish my [Obsidian](https://obsidian.md) posts to blog posts in my [Hugo](https://gohugo.io) SSG site.
+
+## Features
+
+**Automated Publishing Pipeline**
+- Converts Obsidian notes to Hugo-compatible blog posts
+- Handles image processing and organization
+- Manages cover and thumbnail images
+- Maintains proper directory structure
+- Automates git operations and deployment
+
+**Smart Image Management**
+- Processes embedded images with special tags (cover, thumbnail)
+- Creates organized subdirectories for each post
+- Converts Obsidian image links to markdown format
+- Handles image copying and relocation
 
 ## Workflow
 * Create an Obsidian note in a specific folder (e.g., "Posts" using Template "Blog Post Template.md")
@@ -64,3 +79,8 @@ end
 
 ## Future Plans
 * Adding captions to images from Obsidian to the hugo markdown file.
+
+## Acknowledgments
+
+Inspired by NetworkChuck's blog [pipeline](https://www.youtube.com/watch?v=dnE7c0ELEH8) concept.
+
