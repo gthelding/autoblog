@@ -1,4 +1,4 @@
-# Autoblog
+# Autoblog: Automating Blog Publishing from Obsidian to Hugo
 
 Transform your Obsidian notes into a Hugo-powered blog automatically. This project provides scripts to seamlessly publish your Obsidian notes as blog posts using Hugo static site generator. I use this tool to autopublish my [Obsidian](https://obsidian.md) posts to blog posts in my [Hugo](https://gohugo.io) SSG site.
 
@@ -16,6 +16,14 @@ Transform your Obsidian notes into a Hugo-powered blog automatically. This proje
 - Creates organized subdirectories for each post
 - Converts Obsidian image links to markdown format
 - Handles image copying and relocation
+
+## Prerequisites 
+- Obsidian : Ensure you have Obsidian installed with the Templater plugin for blog post templates.
+- Hugo : Install Hugo on your system to build static sites.
+- Git : Required for version control and pushing changes.
+- Python
+- Bash
+     
 
 ## Workflow
 * Create an Obsidian note in a specific folder (e.g., "Posts" using Template "Blog Post Template.md")
